@@ -301,8 +301,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('div');
             item.className = `autocomplete-item${index === selectedIndex ? ' selected' : ''}`;
             item.innerHTML = `
-                <span>${result.name}</span>
-                <span class="autocomplete-symbol">${result.ticker}</span>
+                <span>${result.ticker}</span>    
+                <span class="autocomplete-name">${result.name}</span>
             `;
             
             item.addEventListener('click', () => {
@@ -613,14 +613,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 添加默认股票数据
-    async function loadDefaultStocks() {
-        const defaultStocks = ['SCHD', 'JEPI'];
-        for (const symbol of defaultStocks) {
-            await fetchStockData(symbol);
-        }
-    }
+    // // 添加默认股票数据
+    // async function loadDefaultStocks() {
+    //     const defaultStocks = ['SCHD', 'JEPI'];
+    //     for (const symbol of defaultStocks) {
+    //         await fetchStockData(symbol);
+    //     }
+    // }
 
-    // 页面加载时获取默认股票数据
-    loadDefaultStocks();
+    // // 页面加载时获取默认股票数据
+    // loadDefaultStocks();
 }); 

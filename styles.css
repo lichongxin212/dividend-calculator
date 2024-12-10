@@ -317,7 +317,7 @@ header h1 {
     background: #f5f5f5;
 }
 
-.autocomplete-symbol {
+.autocomplete-name {
     color: #666;
     font-size: 0.9em;
 }
@@ -706,7 +706,9 @@ header h1 {
 }
 
 .nav-icon {
-    color: #4CAF50;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;  /* 确保图标保持比例 */
 }
 
 .nav-links {
@@ -951,7 +953,7 @@ h2 {
     .search-btn {
         width: 45px;           /* 固定按钮宽度 */
         height: 45px;          /* 与输入框同高 */
-        border-radius: 50%;    /* 保持圆��� */
+        border-radius: 50%;    /* 保持圆角 */
         flex-shrink: 0;        /* 防止按钮被压缩 */
     }
 

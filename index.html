@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dividend Calculator | Dividend yield of your portfolio</title>
+    <title>Dividend Calculator | Calculate dividend yield of your portfolio</title>
     <meta name="description" content="Free online dividend calculator to analyze your stock portfolio's dividend income. Track dividend payments, calculate annual yields, view monthly dividend distribution, and analyze portfolio allocation. Support stocks and ETFs like JEPI, SCHD, VOO." />
     <meta name="keywords" content="dividend calculator, portfolio dividend tracker, dividend yield calculator, annual dividend, monthly dividend income, stock dividend analysis, ETF dividend calculator, dividend payment tracker, JEPI dividend, SCHD dividend, SPYD dividend, portfolio dividend calculator, dividend history tracker" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
 </head>
 <body>
     <nav class="top-nav">
         <div class="nav-content">
             <div class="nav-logo">
-                <svg class="nav-icon" viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M3.5 18.5L9.5 12.5L13.5 16.5L22 6.92L20.59 5.5L13.5 13.5L9.5 9.5L2 17L3.5 18.5Z"/>
-                </svg>
+                <img class="nav-icon" src="favicon-32x32.png" alt="Dividend Calculator home page" width="24" height="24">
                 <span>Dividend Calculator</span>
             </div>
             <ul class="nav-links">
-                <li class="active" title="Dividend Yield Calculator"><a href="#">Dividend Yield Calculator</a></li>
-                <li><a href="#" title="Dividend Reinvestment(DRIP) Calculator">Dividend Reinvestment Calculator</a></li>
-                <li><a href="#" title="Feedback">Feedback</a></li>
+                <!-- <li class="active" title="Dividend Portfolio Calculator"><a href="#">Portfolio</a></li>
+                <li><a href="#" title="Stock Dividend Calculator">Stock</a></li>
+                <li><a href="mailto:dividend-calculator@gmail.com?subject=Feedback%20for%20Dividend%20Calculator" title="Send feedback">Feedback</a></li> -->
             </ul>
         </div>
     </nav>
@@ -35,7 +34,7 @@
                 <div class="form-group full-width">
                     <div class="input-with-button">
                         <div class="autocomplete-container">
-                            <input type="text" id="ticker" placeholder="Enter company name or ticker to calculate, e.g. Apple or AAPL">
+                            <input type="text" id="ticker" placeholder="Enter company name or ticker, e.g. Microsoft or MSFT">
                             <div class="autocomplete-dropdown hidden"></div>
                         </div>
                         <button type="button" id="searchStock" class="search-btn">
@@ -45,18 +44,18 @@
                         </button>
                     </div>
                     <div class="quick-ticker-buttons">
-                        <button type="button" class="quick-ticker-btn" data-ticker="AAPL">AAPL</button>
-                        <button type="button" class="quick-ticker-btn" data-ticker="MSFT">MSFT</button>
                         <button type="button" class="quick-ticker-btn" data-ticker="SCHD">SCHD</button>
                         <button type="button" class="quick-ticker-btn" data-ticker="JEPI">JEPI</button>
                         <button type="button" class="quick-ticker-btn" data-ticker="VOO">VOO</button>
+                        <button type="button" class="quick-ticker-btn" data-ticker="MSFT">MSFT</button>
+                        <button type="button" class="quick-ticker-btn" data-ticker="KO">KO</button>
                     </div>
                 </div>
             </section>
 
             <section class="calculator-section">
                 <div class="section-title">
-                    <h2>Portfolio</h2>
+                    <h2>Dividend Portfolio</h2>
                 </div>
                 <section class="calculator-form">
                     <div class="stock-info-table-container">
@@ -79,6 +78,9 @@
                 </section>
 
                 <section class="results hidden">
+                    <div class="section-title">
+                        <h2>Annual Dividend Income</h2>
+                    </div>
                     <div class="portfolio-summary">
                         <div class="summary-cards">
                             <div class="summary-card">
@@ -86,11 +88,11 @@
                                 <p class="amount">$0.00</p>
                             </div>
                             <div class="summary-card">
-                                <h3>Annual Dividend Income(Est.)</h3>
+                                <h3>Annual Dividend Income (Est.)</h3>
                                 <p class="amount">$0.00</p>
                             </div>
                             <div class="summary-card">
-                                <h3>Annual Dividend Yield(Est.)</h3>
+                                <h3>Annual Dividend Yield (Est.)</h3>
                                 <p class="amount">0.00%</p>
                             </div>
                         </div>
@@ -107,9 +109,9 @@
             </section>
 
             <section class="faq-section">
-                <!-- <div class="section-title">
-                    <h2>Dividend FAQs</h2>
-                </div> -->
+                <div class="section-title">
+                    <h2>FAQs</h2>
+                </div>
                 <div class="faq-cards">
                     <div class="faq-card">
                         <h3>How to calculate stock dividend yield?</h3>
